@@ -44,9 +44,12 @@ module.exports = async (req, res) => {
   //res.status(200).json({ users })
   res.status(200).send("Working")
 }
+
 async function listDatabases(client){
   databasesList = await client.db().admin().listDatabases();
-
+  
+  module.exports = async (req, res) => {
   res.status(200).send("Databases:");	
   databasesList.databases.forEach(db => res.status(200).json(` - ${db.name}`));
+  }
 };
