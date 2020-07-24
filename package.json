@@ -1,0 +1,17 @@
+{
+  "name": "makearo-api",
+  "version": "1.0.0",
+  "description": "Makearo App API",
+  "main": "server.js",
+  "scripts": {
+    "test": "npm run"
+  },
+  "author": "Niharika Kumar and S.Eesha",
+  "license": "ISC",
+  "dependencies": {
+    "mongodb": "^3.5.9"
+  },
+  "devDependencies": {
+    "@vercel/node": "^1.7.3"
+  }
+}
