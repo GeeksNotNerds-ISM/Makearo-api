@@ -36,7 +36,8 @@ module.exports = async (req, res) => {
 
   // Select the "users" collection from the database
   //const collection = await db.collection('accounts')
-  const collection=await db.db('sample_analytics').collection('customers')
+  var dbo = db.db("sample_analytics");
+  const collection=await dbo.collection('customers')
   // Select the users collection from the database
   const users = await collection.find({}).toArray()
 
