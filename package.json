@@ -11,6 +11,10 @@
   "dependencies": {
     "mongodb": "^3.5.9"
   },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/99nk/https://github.com/GeeksNotNerds-ISM/Makearo-api.git"
+  },
   "devDependencies": {
     "@vercel/node": "^1.7.3"
   }
