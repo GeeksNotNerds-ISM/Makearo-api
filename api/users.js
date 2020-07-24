@@ -32,24 +32,25 @@ async function connectToDatabase(uri) {
 module.exports = async (req, res) => {
   // Get a database connection, cached or otherwise,
   // using the connection string environment variable as the argument
-  //const db = await connectToDatabase(process.env.MONGODB_URI)
+  const db = await connectToDatabase(process.env.MONGODB_URI)
 
   // Select the "users" collection from the database
-  //const collection = await db.collection('users')
+  const collection = await db.collection('accounts')
 
   // Select the users collection from the database
-  //const users = await collection.find({}).toArray()
+  const users = await collection.find({}).toArray()
 
   // Respond with a JSON string of all users in the collection
-  //res.status(200).json({ users })
+  res.status(200).json({ users })
   res.status(200).send("Working")
 }
 
+
 async function listDatabases(client){
-  databasesList = await client.db().admin().listDatabases();
-  
+ // databasesList = await client.db().admin().listDatabases();
+
   module.exports = async (req, res) => {
-  res.status(200).send("Databases:");	
-  databasesList.databases.forEach(db => res.status(200).json(` - ${db.name}`));
+  //res.status(200).send("Databases:");	
+  //databasesList.databases.forEach(db => res.status(200).json(` - ${db.name}`));
   }
 };
