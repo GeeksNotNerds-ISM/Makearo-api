@@ -1,0 +1,22 @@
+{
+  "name": "makearo-api",
+  "version": "1.0.0",
+  "description": "Makearo App API",
+  "main": "server.js",
+  "scripts": {
+    "test": "npm run"
+  },
+  "author": "Niharika Kumar and S.Eesha",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongodb": "^3.5.9"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/99nk/https://github.com/GeeksNotNerds-ISM/Makearo-api.git"
+  },
+  "devDependencies": {
+    "@vercel/node": "^1.7.3"
+  }
+}
