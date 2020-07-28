@@ -1,7 +1,15 @@
 // Import Dependencies
 const url = require('url')
+var express =require('express');
+var app=express();
 const uri = "mongodb+srv://untanglegeek:Geeks%2320Ism%2ANerds@makaero.qc4nx.mongodb.net/makearo?retryWrites=true&w=majority";
 const MongoClient = require('mongodb').MongoClient
+
+var port =process.env.PORT 
+var router=express.Router();
+
+//Routes will all be prefixed with /api
+app.use('/test',router);
 
 // Create cached connection variable
 let cachedDb = null
@@ -41,7 +49,10 @@ module.exports = async (req, res) => {
   res.status(200).json({ users })
   //res.status(200).send("Working")
 }
-
+router.get('/',function(req,res){
+  res.json({message:'Welcome to our API'});
+})
+app.listen(port);
 
 async function listDatabases(client){
  // databasesList = await client.db().admin().listDatabases();

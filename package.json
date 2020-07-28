@@ -9,6 +9,7 @@
   "author": "Niharika Kumar and S.Eesha",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.17.1",
     "mongodb": "^3.5.9"
   },
   "repository": {
